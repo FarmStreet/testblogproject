@@ -2,13 +2,15 @@ import cls from "./BlockArticle.module.scss";
 import classNames from "classnames";
 import BlockItem from "components/BlockItem/BlockItem";
 import {ReactNode} from "react";
+import {Link} from "react-router-dom";
+import ArticleBody from "components/ArticleBody/ArticleBody";
 
 interface BlockArticleProps {
     className?: string;
     title: string;
-    tags: string[];
+    tag: string;
     children: ReactNode;
-    url: string;
+    id: number;
 }
 
 const BlockArticle = (props: BlockArticleProps) => {
@@ -16,20 +18,15 @@ const BlockArticle = (props: BlockArticleProps) => {
     const {
         className,
         title,
-        tags,
+        tag,
         children,
-        url
+        id
     } = props;
 
     return (
         <BlockItem className={classNames(cls.BlockArticle, className)}>
-            <div className={cls.Title}>{title}</div>
-            <div className={cls.Tags}>{
-                tags.map((tag, key, array) =>
-                    <a key={key}>{tag}{array.length - 1 !== key ? ', ' : ''}</a>)}
-            </div>
-            <div className={cls.Desc}>{children}</div>
-            <button className={cls.ReadButton}>Читать...</button>
+            <ArticleBody title={title} tag={tag}>{children}</ArticleBody>
+            <Link to={`/article/${id}`}><button className={cls.ReadButton}>Читать...</button></Link>
         </BlockItem>
     );
 };

@@ -1,4 +1,5 @@
 @import "app/styles/variables/global.scss";
+@import "pages/Article/Article.module.scss";
 
 .BlockArticle {
   color: $extraColor;
@@ -6,25 +7,6 @@
 
 .BlockArticle div:not(:first-child), button {
   margin-top: 10px;
-}
-
-.Title {
-  font-size: $fontSizeLarge;
-  line-height: $fontLineHeightLarge;
-  color: $extraColor;
-}
-
-.Tags {
-
-  font-size: $fontSizeSmall;
-  line-height: $fontLineHeightSmall;
-  color: $extraColor;
-
-  cursor: pointer;
-}
-
-.Desc {
-
 }
 
 .ReadButton {

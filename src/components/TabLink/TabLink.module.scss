@@ -1,0 +1,16 @@
+@import "app/styles/variables/global.scss";
+
+.Tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 10px;
+
+  cursor: pointer;
+  color: $backgroundColor;
+}
+
+.Tab:hover, .Tab.Active {
+  color: $primaryColor;
+}

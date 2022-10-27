@@ -1,3 +1,10 @@
-.Article {
+@import "app/styles/variables/global.scss";
 
+.Article {
+  color: $extraColor;
 }
+
+.Article div:not(:first-child) {
+  margin-top: 10px;
+}
+

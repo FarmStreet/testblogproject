@@ -1,19 +1,24 @@
 import cls from "./Navbar.module.scss";
 import classNames from "classnames";
+import {Link, useLocation} from "react-router-dom";
+import {AppRoutes, RoutePath} from "router/RouteConfig";
+import TabLink from "components/TabLink/TabLink";
 
 interface NavbarProps {
     className?: string;
 }
 
 const Navbar = ({className}: NavbarProps) => {
+
+
     return (
         <div className={classNames(cls.Navbar, className)}>
             <div className={classNames(cls.TabCollection)}>
-                <div className={classNames(cls.Tab)}>LOGO</div>
+                <TabLink className={cls.Logo} url={RoutePath[AppRoutes.MAIN]}>LOGO</TabLink>
             </div>
             <div className={classNames(cls.TabCollection)}>
-                <div className={classNames(cls.Tab)}>Главная</div>
-                <div className={classNames(cls.Tab)}>Профиль</div>
+                <TabLink url={RoutePath[AppRoutes.MAIN]}>Главная</TabLink>
+                <TabLink url={RoutePath[AppRoutes.PROFILE]}>Профиль</TabLink>
             </div>
         </div>
     );

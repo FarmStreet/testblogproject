@@ -1,6 +1,13 @@
 @import "reset";
 @import "./variables/global";
 
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   font-size: $fontSizeDefault;
   line-height: $fontLineHeightDefault;
@@ -8,8 +15,9 @@
   background-color: $backgroundColor;
   color: $primaryColor;
   min-height: 100vh;
+  min-width: 400px;
 }
 
 .content-page {
-  padding-bottom: 20px;
+  padding: 0 $paddingX 20px $paddingX;
 }
