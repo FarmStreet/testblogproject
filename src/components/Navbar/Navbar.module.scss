@@ -1,0 +1,34 @@
+@import "app/styles/variables/global.scss";
+
+.Navbar {
+    background: $secondaryColor;
+    height: $navbarHeight;
+    border-bottom: 2px $primaryColor solid;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $paddingX;
+
+    position: sticky;
+    top: 0;
+}
+
+.TabCollection {
+    display: flex;
+    height: 100%;
+}
+
+.Tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+
+    cursor: pointer;
+    color: $backgroundColor;
+}
+
+.Tab:hover, .Tab.Active {
+    color: $primaryColor;
+}

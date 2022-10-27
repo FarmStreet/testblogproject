@@ -1,0 +1,15 @@
+@import "reset";
+@import "./variables/global";
+
+.App {
+  font-size: $fontSizeDefault;
+  line-height: $fontLineHeightDefault;
+  font-family: $fontFamilyDefault;
+  background-color: $backgroundColor;
+  color: $primaryColor;
+  min-height: 100vh;
+}
+
+.content-page {
+  padding-bottom: 20px;
+}

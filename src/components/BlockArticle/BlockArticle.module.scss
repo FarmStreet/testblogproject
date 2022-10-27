@@ -1,0 +1,38 @@
+@import "app/styles/variables/global.scss";
+
+.BlockArticle {
+  color: $extraColor;
+}
+
+.BlockArticle div:not(:first-child), button {
+  margin-top: 10px;
+}
+
+.Title {
+  font-size: $fontSizeLarge;
+  line-height: $fontLineHeightLarge;
+  color: $extraColor;
+}
+
+.Tags {
+
+  font-size: $fontSizeSmall;
+  line-height: $fontLineHeightSmall;
+  color: $extraColor;
+
+  cursor: pointer;
+}
+
+.Desc {
+
+}
+
+.ReadButton {
+  background: $secondaryColor;
+  border-radius: 5px;
+  border: 2px $primaryColor solid;
+
+  padding: 5px 10px;
+
+  cursor: pointer;
+}
