@@ -1,15 +1,13 @@
 import cls from "./Navbar.module.scss";
 import classNames from "classnames";
-import {Link, useLocation} from "react-router-dom";
 import {AppRoutes, RoutePath} from "router/RouteConfig";
-import TabLink from "components/TabLink/TabLink";
+import TabLink from "components/Shared/TabLink/TabLink";
 
 interface NavbarProps {
     className?: string;
 }
 
 const Navbar = ({className}: NavbarProps) => {
-
 
     return (
         <div className={classNames(cls.Navbar, className)}>

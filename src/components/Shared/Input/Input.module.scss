@@ -1,0 +1,13 @@
+@import "app/styles/variables/global.scss";
+
+.Input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px $primaryColor solid;
+  background: $secondaryColor;
+  padding: 10px 40px 10px 15px;
+  margin: 0;
+
+  font-size: $fontSizeDefault;
+  line-height: $fontLineHeightDefault;
+}

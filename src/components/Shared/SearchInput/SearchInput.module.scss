@@ -1,0 +1,24 @@
+@import "app/styles/variables/global.scss";
+
+.SearchInput {
+
+}
+
+.Label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  fill: $primaryColor;
+  stroke: $primaryColor;
+}
+
+.SearchInput:focus ~ .Icon, .SearchInput:active ~ .Icon {
+  fill: $extraColor;
+  stroke: $extraColor;
+}

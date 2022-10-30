@@ -1,0 +1,20 @@
+@import "app/styles/variables/global.scss";
+@import "app/styles/truncate.scss";
+@import "pages/Article/Article.module.scss";
+
+.BlockArticle {
+  color: $extraColor;
+  height: 200px;
+}
+
+.BlockArticle div:not(:first-child) {
+  margin-top: 10px;
+}
+
+.BlockArticle .BlockArticle a div {
+  @extend .truncate;
+}
+
+.ReadButton {
+  margin-top: 20px;
+}

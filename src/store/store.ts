@@ -1,14 +1,19 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import articleReducer from "store/reducers/articleSlice";
+import {articleAPI} from "store/services/ArticleService";
+import userReducer from "store/slices/User/UserSlice";
 
 
 const rootReducer = combineReducers({
-    articleReducer,
+    [articleAPI.reducerPath]: articleAPI.reducer,
+    userReducer
 })
 
 export const setupStore = () => {
     return configureStore({
-        reducer: rootReducer
+        reducer: rootReducer,
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware()
+                .concat(articleAPI.middleware)
     })
 }
 

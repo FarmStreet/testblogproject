@@ -1,0 +1,11 @@
+@import "app/styles/variables/global.scss";
+
+.ArticleSinglePage {
+  color: $extraColor;
+
+}
+
+.ArticleSinglePage div:not(:first-child) {
+  margin-top: 10px;
+}
+

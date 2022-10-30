@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import {RouteConfig} from "./RouteConfig";
+import LoaderPage from "pages/LoaderPage/LoaderPage";
 
 const AppRouter = () => (
     <Routes>
@@ -10,7 +11,7 @@ const AppRouter = () => (
                     key={path}
                     path={path}
                     element={(
-                        <Suspense fallback={<div>Loading...</div>}>
+                        <Suspense fallback={<LoaderPage />}>
                             <div className="page-wrapper">
                                 {element}
                             </div>

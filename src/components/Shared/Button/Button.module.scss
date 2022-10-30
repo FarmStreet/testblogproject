@@ -1,0 +1,16 @@
+@import "app/styles/variables/global.scss";
+
+.Button {
+    background: $secondaryColor;
+    border-radius: 5px;
+    border: 2px $primaryColor solid;
+
+    padding: 5px 10px;
+
+    cursor: pointer;
+}
+
+.Button:hover, .Button:active {
+    background: $primaryColor;
+    color: $secondaryColor;
+}

@@ -1,0 +1,47 @@
+@import "app/styles/variables/global.scss";
+@import "components/Shared/Input/Input.module.scss";
+
+.BlockForm {
+
+  input, textarea {
+    margin-top: 15px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+  @extend .Input
+}
+
+.Submit {
+  display: flex;
+  font-size: $fontSizeDefault;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  width: 200px;
+  margin: 0;
+}
+
+.Error {
+  font-size: $fontSizeDefault;
+  color: red;
+  opacity: .5;
+  text-align: center;
+}
+
+.Success {
+  font-size: $fontSizeDefault;
+  color: green;
+  opacity: .5;
+  text-align: center;
+}
