@@ -10,11 +10,13 @@ interface SearchInputProps {
     onClick: (value: string) => void;
 }
 
+const DEBOUNCE_TIMER_MS = 250;
+
 const SearchInput = ({className, onClick}: SearchInputProps) => {
 
     const [searchInputValue, setInputSearchValue] = useState<string>('');
 
-    const debouncedHandle = debounce((value) => onClick(value), 250)
+    const debouncedHandle = debounce((value) => onClick(value), DEBOUNCE_TIMER_MS)
 
     return (<div className={className}>
             <label className={cls.Label}><Input onKeyUp={(e) => e.which === 13 ? onClick(searchInputValue) : {}}

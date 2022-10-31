@@ -1,6 +1,7 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {IUser} from "models/IUser";
 import axios from "axios";
+import {API_URL} from "app/variables/api";
 
 export const signIn = createAsyncThunk<
     IUser | null,
@@ -13,7 +14,7 @@ export const signIn = createAsyncThunk<
             if (user === null) return null;
 
             const response = await axios.get(
-                `http://localhost:3000/users?login=${user.login}&password=${user.password}`);
+                `${API_URL}/users?login=${user.login}&password=${user.password}`);
 
             if (!response.data[0].login) return rejectWithValue('Неверный логин/пароль');
             return response.data[0];
@@ -31,13 +32,13 @@ export const signUp = createAsyncThunk<
     }>('user/signUp', async (user, {rejectWithValue}) => {
         try {
             const fetchUser = await axios.get(
-                `http://localhost:3000/users?login=${user.login}`);
+                `${API_URL}/users?login=${user.login}`);
 
             if (fetchUser.data.login || fetchUser.data.length > 0)
                 return rejectWithValue('Пользователь с таким логином уже существует');
 
             const response = await axios.post(
-                `http://localhost:3000/users`, {
+                `${API_URL}/users`, {
                     login: user.login,
                     password: user.password
                 });

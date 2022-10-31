@@ -1,0 +1,11 @@
+@import "app/styles/variables/global.scss";
+
+.BlockItem {
+    background: $secondaryColor;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+}

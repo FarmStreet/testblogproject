@@ -4,7 +4,6 @@
 
 .BlockArticle {
   color: $extraColor;
-  height: 200px;
 }
 
 .BlockArticle div:not(:first-child) {
@@ -17,4 +16,6 @@
 
 .ReadButton {
   margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
 }
