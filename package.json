@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FarmStreet/testalternativaproject.git"
+    "url": "git+https://github.com/FarmStreet/testproject.git"
   },
   "author": "keylord",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FarmStreet/testalternativaproject/issues"
   },
-  "homepage": "https://github.com/FarmStreet/testalternativaproject#readme",
+  "homepage": "https://github.com/FarmStreet/testproject#readme",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
