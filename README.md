@@ -13,4 +13,4 @@ npm run start
 
 ## Используемые технологии
 
-React, Typescript, Webpack, Redux, Redux-toolkit, Redux-thunk, Axios, SCSS
+React, Typescript, Webpack, Redux, Redux-toolkit, Redux-thunk, Axios, SASS
